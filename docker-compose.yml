@@ -1,0 +1,15 @@
+version: "3"
+
+services:
+  nodeapp:
+    build: ./app
+    ports:
+      - "3000:3000"
+  mongo:
+    image: mongo
+    ports:
+      - "27017:27017"
+  nginx:
+    image: nginx
+    ports:
+      - "80:80"
